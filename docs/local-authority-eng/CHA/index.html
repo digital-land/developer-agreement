@@ -119,18 +119,28 @@
     </form>
     <div class="js-no-filter-list-matches"><p class="govuk-body">No matches.</p></div> <!-- needs to go outside of index-list-wrapper -->
 
-    <div class="index-list-wrapper">
+
+        <div class="index-list-wrapper">
             <div class="count-wrapper">
                 <p class="govuk-body" aria-hidden="true">Showing <span class="js-list-count">21</span> records.</p>
                 <p class="govuk-visually-hidden">There are
                     <span class="js-accessible-list-count">21</span>
                     records listed.
                 </p>
+            </div>        <form action="" class="govuk-form govuk-!-margin-bottom-4 dl-historical-toggle-form js-hidden" data-historical="form">
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hsitorical" name="hsitorical" type="checkbox" value="show">
+                    <label class="govuk-label govuk-checkboxes__label" for="hsitorical">
+                    Show historical records
+                    </label>
+                </div>
             </div>
-
-            <table class="dl-index-list" data-filter="list">
+        </form>
+<table class="dl-index-list"
+ data-filter="list" data-historical='list'>
   <tbody>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-11-0149-2-da" data-filter="match-content">P/11/0149/2-da</a>
@@ -141,7 +151,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/11/0149/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-11-1305-2-da" data-filter="match-content">P/11/1305/2-da</a>
@@ -152,7 +162,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/11/1305/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-13-1826-2-da" data-filter="match-content">P/13/1826/2-da</a>
@@ -163,7 +173,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/13/1826/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-15-0047-2-da" data-filter="match-content">P/15/0047/2-da</a>
@@ -174,7 +184,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/15/0047/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-17-0388-2-da" data-filter="match-content">P/17/0388/2-da</a>
@@ -184,7 +194,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/17/0388/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-17-2200-2-da" data-filter="match-content">P/17/2200/2-da</a>
@@ -195,7 +205,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/17/2200/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-17-2391-2-da" data-filter="match-content">P/17/2391/2-da</a>
@@ -205,7 +215,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/17/2391/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-17-2604-2-da" data-filter="match-content">P/17/2604/2-da</a>
@@ -215,7 +225,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/17/2604/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0284-2-da" data-filter="match-content">P/18/0284/2-da</a>
@@ -226,7 +236,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0284/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0659-2-da" data-filter="match-content">P/18/0659/2-da</a>
@@ -236,7 +246,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0659/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0662-2-da" data-filter="match-content">P/18/0662/2-da</a>
@@ -246,7 +256,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0662/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0709-2-da" data-filter="match-content">P/18/0709/2-da</a>
@@ -256,7 +266,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0709/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0888-2-da" data-filter="match-content">P/18/0888/2-da</a>
@@ -266,7 +276,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0888/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-0985-2-da" data-filter="match-content">P/18/0985/2-da</a>
@@ -276,7 +286,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/0985/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-2058-2-da" data-filter="match-content">P/18/2058/2-da</a>
@@ -287,7 +297,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/2058/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-2067-2-da" data-filter="match-content">P/18/2067/2-da</a>
@@ -297,7 +307,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/2067/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-2194-2-da" data-filter="match-content">P/18/2194/2-da</a>
@@ -308,7 +318,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/2194/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-18-2345-2-da" data-filter="match-content">P/18/2345/2-da</a>
@@ -319,7 +329,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/18/2345/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-19-0394-2-da" data-filter="match-content">P/19/0394/2-da</a>
@@ -329,7 +339,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/19/0394/2</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-19-0687-2-da" data-filter="match-content">P/19/0687/2-da</a>
@@ -340,7 +350,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application P/19/0687/2</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./P-19-0862-2-da" data-filter="match-content">P/19/0862/2-da</a>
@@ -352,8 +362,8 @@
 </tr></tbody>
 </table>
 
+        </div>
 
-    </div>
 
         </main>
       </div>
@@ -442,6 +452,15 @@
             list_section_selector: '.index-list-wrapper',
             count_wrapper_selector: '.count-wrapper'
         })
+        </script>
+        <script>
+            const showCounts = true
+            const $hist = document.querySelector('[data-historical="form"]');
+            new window.DLFrontend.FilterHistorical($hist).init({
+                triggerEvents: "list:filtered",
+                listWrapperSelector: '.index-list-wrapper',
+                showCountsWhenShowingAll: showCounts
+            })
         </script>
 
   </body>

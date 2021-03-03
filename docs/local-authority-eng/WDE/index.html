@@ -114,18 +114,28 @@
 <h1 class="govuk-heading-xl"></h1>
 
 
-    <div class="index-list-wrapper">
+
+        <div class="index-list-wrapper">
             <div class="count-wrapper">
                 <p class="govuk-body" aria-hidden="true">Showing <span class="js-list-count">7</span> records.</p>
                 <p class="govuk-visually-hidden">There are
                     <span class="js-accessible-list-count">7</span>
                     records listed.
                 </p>
+            </div>        <form action="" class="govuk-form govuk-!-margin-bottom-4 dl-historical-toggle-form js-hidden" data-historical="form">
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hsitorical" name="hsitorical" type="checkbox" value="show">
+                    <label class="govuk-label govuk-checkboxes__label" for="hsitorical">
+                    Show historical records
+                    </label>
+                </div>
             </div>
-
-            <table class="dl-index-list" data-filter="list">
+        </form>
+<table class="dl-index-list"
+ data-filter="list" data-historical='list'>
   <tbody>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./0121-19-OPA-IFSDA" data-filter="match-content">0121/19/OPA-IFSDA</a>
@@ -135,7 +145,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 0121/19/OPA</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./1484-17-OPA-IFSDA" data-filter="match-content">1484/17/OPA-IFSDA</a>
@@ -145,7 +155,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 1484/17/OPA</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./1549-18-FUL-IFSDA" data-filter="match-content">1549/18/FUL-IFSDA</a>
@@ -155,7 +165,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 1549/18/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./1635-18-OPA-IFSDA" data-filter="match-content">1635/18/OPA-IFSDA</a>
@@ -165,7 +175,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 1635/18/OPA</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./1794-18-FUL-IFSDA" data-filter="match-content">1794/18/FUL-IFSDA</a>
@@ -175,7 +185,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 1794/18/Ful</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./2353-18-OPA-IFSDA" data-filter="match-content">2353/18/OPA-IFSDA</a>
@@ -185,7 +195,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 2353/18/OPA</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./2356-19-OPA-IFSDA" data-filter="match-content">2356/19/OPA-IFSDA</a>
@@ -197,8 +207,8 @@
 </tr></tbody>
 </table>
 
+        </div>
 
-    </div>
 
         </main>
       </div>
@@ -280,6 +290,15 @@
 
 
 
+        <script>
+            const showCounts = true
+            const $hist = document.querySelector('[data-historical="form"]');
+            new window.DLFrontend.FilterHistorical($hist).init({
+                triggerEvents: "list:filtered",
+                listWrapperSelector: '.index-list-wrapper',
+                showCountsWhenShowingAll: showCounts
+            })
+        </script>
 
   </body>
 </html>

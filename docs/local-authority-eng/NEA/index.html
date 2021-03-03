@@ -119,18 +119,28 @@
     </form>
     <div class="js-no-filter-list-matches"><p class="govuk-body">No matches.</p></div> <!-- needs to go outside of index-list-wrapper -->
 
-    <div class="index-list-wrapper">
+
+        <div class="index-list-wrapper">
             <div class="count-wrapper">
                 <p class="govuk-body" aria-hidden="true">Showing <span class="js-list-count">23</span> records.</p>
                 <p class="govuk-visually-hidden">There are
                     <span class="js-accessible-list-count">23</span>
                     records listed.
                 </p>
+            </div>        <form action="" class="govuk-form govuk-!-margin-bottom-4 dl-historical-toggle-form js-hidden" data-historical="form">
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hsitorical" name="hsitorical" type="checkbox" value="show">
+                    <label class="govuk-label govuk-checkboxes__label" for="hsitorical">
+                    Show historical records
+                    </label>
+                </div>
             </div>
-
-            <table class="dl-index-list" data-filter="list">
+        </form>
+<table class="dl-index-list"
+ data-filter="list" data-historical='list'>
   <tbody>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./14-00161-FULM-S106" data-filter="match-content">14/00161/FULM-S106</a>
@@ -140,7 +150,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 14/00161/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./14-00353-FUL-ag" data-filter="match-content">14/00353/FUL-ag</a>
@@ -150,7 +160,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/00353/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./15-00429-FUL-ag" data-filter="match-content">15/00429/FUL-ag</a>
@@ -160,7 +170,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/00429/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./15-00501-FULM-ag" data-filter="match-content">15/00501/FULM-ag</a>
@@ -170,7 +180,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/00501/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./15-01295-FULM-ag" data-filter="match-content">15/01295/FULM-ag</a>
@@ -180,7 +190,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/01295/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./17-00029-FUL-ag" data-filter="match-content">17/00029/FUL-ag</a>
@@ -190,7 +200,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/00029/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./17-00959-FUL-ag" data-filter="match-content">17/00959/FUL-ag</a>
@@ -200,7 +210,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/00959/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./17-01248-FUL-ag" data-filter="match-content">17/01248/FUL-ag</a>
@@ -210,7 +220,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/01248/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./17-01846-FUL-ag" data-filter="match-content">17/01846/FUL-ag</a>
@@ -220,7 +230,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/01846/FUL</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./17-02215-RMA-ag" data-filter="match-content">17/02215/RMA-ag</a>
@@ -231,7 +241,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/02215/RMA</p>
   </td>
 </tr>
-<tr class=" historical-item"  data-filter="item">
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-00123-FUL-ag" data-filter="match-content">18/00123/FUL-ag</a>
@@ -242,7 +252,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/00123/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-00526-RMAM-ag" data-filter="match-content">18/00526/RMAM-ag</a>
@@ -252,7 +262,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/00526/RMAM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-00597-FULM-ag" data-filter="match-content">18/00597/FULM-ag</a>
@@ -262,7 +272,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/00597/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-00953-FUL-ag" data-filter="match-content">18/00953/FUL-ag</a>
@@ -272,7 +282,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/00953/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-01020-FULM-ag" data-filter="match-content">18/01020/FULM-ag</a>
@@ -282,7 +292,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/01020/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-01241-FUL-ag" data-filter="match-content">18/01241/FUL-ag</a>
@@ -292,7 +302,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/01241/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-01497-FUL-ag" data-filter="match-content">18/01497/FUL-ag</a>
@@ -302,7 +312,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/01497/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-01898-OUTM-S106" data-filter="match-content">18/01898/OUTM-S106</a>
@@ -312,7 +322,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 18/01898/OUTM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-02153-FUL-ag" data-filter="match-content">18/02153/FUL-ag</a>
@@ -322,7 +332,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/02153/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./18-02304-FUL-ag" data-filter="match-content">18/02304/FUL-ag</a>
@@ -332,7 +342,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/02304/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./19-00490-FUL-ag" data-filter="match-content">19/00490/FUL-ag</a>
@@ -342,7 +352,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/00490/FUL</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./19-00585-FULM-S106" data-filter="match-content">19/00585/FULM-S106</a>
@@ -352,7 +362,7 @@
     <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 19/00585/FULM</p>
   </td>
 </tr>
-<tr class=""  data-filter="item">
+<tr class=""  data-filter="item" data-historical-item="false">
   <td>
     <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
       <a class="govuk-link" href="./19-01615-RMA-ag" data-filter="match-content">19/01615/RMA-ag</a>
@@ -364,8 +374,8 @@
 </tr></tbody>
 </table>
 
+        </div>
 
-    </div>
 
         </main>
       </div>
@@ -454,6 +464,15 @@
             list_section_selector: '.index-list-wrapper',
             count_wrapper_selector: '.count-wrapper'
         })
+        </script>
+        <script>
+            const showCounts = true
+            const $hist = document.querySelector('[data-historical="form"]');
+            new window.DLFrontend.FilterHistorical($hist).init({
+                triggerEvents: "list:filtered",
+                listWrapperSelector: '.index-list-wrapper',
+                showCountsWhenShowingAll: showCounts
+            })
         </script>
 
   </body>
