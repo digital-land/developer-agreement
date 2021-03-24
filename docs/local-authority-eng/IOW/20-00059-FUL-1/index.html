@@ -122,13 +122,6 @@
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">20/00059/FUL-1</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement-type
-            </dt>
-            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/section-106" class="govuk-link">Section 106</a>
-<span title="developer-agreement-type identifier: section-106" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>section-106)</span>
-</div>
-            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">planning-application
             </dt>
             <dd class="govuk-summary-list__value">                20/00059/FUL            </dd>
@@ -136,6 +129,17 @@
             <dt class="govuk-summary-list__key">document-url
             </dt>
             <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=31473">https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=31473</a>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                2020-04-16            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">developer-agreement-type
+            </dt>
+            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/section-106" class="govuk-link">Section 106</a>
+<span title="developer-agreement-type identifier: section-106" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>section-106)</span>
+</div>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
@@ -146,22 +150,47 @@
             <dt class="govuk-summary-list__key">entry-date
             </dt>
             <dd class="govuk-summary-list__value">                2020-12-22            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2020-04-16            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">end-date
-            </dt>
-            <dd class="govuk-summary-list__value">                            </dd>
         </div>    
-    </dl>    <footer class="govuk-!-font-size-16 data-record__resource">From resource <a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/e09eeba55db2782a8c44b38b46ac2924e4ac40f0fbb53a5246cac51e3fe698e1.csv" class="govuk-link">e09eeba55db2782a8...</a></footer>
-</article>
+    </dl></article>
 </div>
             
 </div>
 
-        </main>
+<a href="https://digital-land.github.io/specification/schema/developer-agreement/">View the schema for developer-agreement</a>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-9">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+<div class="data-table-left-shadow with-transition"></div>
+<div class="wide-table">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>entry-date</th>
+                <th>resource</th>
+                <th>line</th>
+                <th>start-date</th>
+                <th>developer-agreement</th>
+                <th>document-url</th>
+                <th>planning-application</th>
+                <th>organisation</th>
+                <th>developer-agreement-type</th>
+            </tr>
+        </thead>
+        <tbody>            <tr>
+                <td>2020-12-22</td>
+                <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/9f3a85360fb27e8b7ece901cf9e73bb904be9a65bbfb082cffbcce48fa61304d.csv#L114">9f3a85360fb2...</a></td>
+                <td>113</td>
+                    <td>2020-04-16</td> 
+                    <td>20/00059/FUL-1</td> 
+                    <td>https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&amp;id=31473</td> 
+                    <td>20/00059/FUL</td> 
+                    <td>local-authority-eng:IOW</td> 
+                    <td>section-106</td> 
+            </tr>        </tbody>
+    </table>
+</div>
+<div class="data-table-right-shadow visible with-transition"></div>
+</div>        </main>
       </div>
 
     <div class="dlf-feedback__wrapper">
@@ -254,6 +283,13 @@
 <script>
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const mapComponent = new DLMaps.Map($mapElement).init({})
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
 </script>
   </body>
 </html>

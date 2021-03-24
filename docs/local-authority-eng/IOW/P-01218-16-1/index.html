@@ -118,9 +118,15 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/local-authority-eng/IOW/P-01218-16-1</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
+            <dt class="govuk-summary-list__key">start-date
             </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">P/01218/16-1</span>            </dd>
+            <dd class="govuk-summary-list__value">                2019-08-14            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">organisation
+            </dt>
+            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/IOW" class="govuk-link">Isle of Wight Council</a>
+<span title="Organisation identifier: local-authority-eng:IOW" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:IOW)</span>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement-type
             </dt>
@@ -129,39 +135,62 @@
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
+            <dt class="govuk-summary-list__key">developer-agreement
             </dt>
-            <dd class="govuk-summary-list__value">                P/01218/16            </dd>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">P/01218/16-1</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">document-url
             </dt>
             <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=29211">https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=29211</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
+            <dt class="govuk-summary-list__key">planning-application
             </dt>
-            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/IOW" class="govuk-link">Isle of Wight Council</a>
-<span title="Organisation identifier: local-authority-eng:IOW" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:IOW)</span>
-            </dd>
+            <dd class="govuk-summary-list__value">                P/01218/16            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
             <dd class="govuk-summary-list__value">                2020-12-15            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2019-08-14            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">end-date
-            </dt>
-            <dd class="govuk-summary-list__value">                            </dd>
         </div>    
-    </dl>    <footer class="govuk-!-font-size-16 data-record__resource">From resource <a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/e09eeba55db2782a8c44b38b46ac2924e4ac40f0fbb53a5246cac51e3fe698e1.csv" class="govuk-link">e09eeba55db2782a8...</a></footer>
-</article>
+    </dl></article>
 </div>
             
 </div>
 
-        </main>
+<a href="https://digital-land.github.io/specification/schema/developer-agreement/">View the schema for developer-agreement</a>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-9">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+<div class="data-table-left-shadow with-transition"></div>
+<div class="wide-table">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>entry-date</th>
+                <th>resource</th>
+                <th>line</th>
+                <th>start-date</th>
+                <th>developer-agreement</th>
+                <th>document-url</th>
+                <th>planning-application</th>
+                <th>organisation</th>
+                <th>developer-agreement-type</th>
+            </tr>
+        </thead>
+        <tbody>            <tr>
+                <td>2020-12-15</td>
+                <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/463521bc4e1ce3700f2f37aeb2116cf028737231a70678ed562e4bca56ece4cb.csv#L73">463521bc4e1c...</a></td>
+                <td>72</td>
+                    <td>2019-08-14</td> 
+                    <td>P/01218/16-1</td> 
+                    <td>https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&amp;id=29211</td> 
+                    <td>P/01218/16</td> 
+                    <td>local-authority-eng:IOW</td> 
+                    <td>section-106</td> 
+            </tr>        </tbody>
+    </table>
+</div>
+<div class="data-table-right-shadow visible with-transition"></div>
+</div>        </main>
       </div>
 
     <div class="dlf-feedback__wrapper">
@@ -254,6 +283,13 @@
 <script>
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const mapComponent = new DLMaps.Map($mapElement).init({})
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
 </script>
   </body>
 </html>
