@@ -130,7 +130,7 @@
                 </a>
             </li><li class="dlf-subnav__list-item">
                 <a class="dlf-subnav__list-item__link" href="#referenced-by" data-module-sub-nav="tab">
-                Referenced by (0)
+                0 References
                 </a>
             </li>
         </ul>
@@ -177,16 +177,16 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>developer-agreement</th>
             <th>organisation</th>
+            <th>developer-agreement</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2021-03-25</td>
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/31e233319b082fed11b3e2336c51d757a8a121ac7c6caf8a97f3cbe8ee411a76.csv#L6">31e233319b08...</a></td>
             <td>5</td>
-                <td>LA/2018/1730/UU</td> 
                 <td>local-authority-eng:SNR</td> 
+                <td>LA/2018/1730/UU</td> 
         </tr>    </tbody>
 </table>
 
@@ -292,8 +292,24 @@
 	</script>
 
 <script>
+    const datasetName = "developer-agreement"
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
-    const mapComponent = new DLMaps.Map($mapElement).init({})
+    const $nationalMapLink = document.querySelector('.dl-link-national-map')
+    const mapComponent = new DLMaps.Map($mapElement).init({
+        initGeoJsonLoadCallback: function (urls, featureGroup) {
+            console.log("initial load completed")
+            // do we need to check there isn't more than one shape?
+            const center = featureGroup.getBounds().getCenter()
+            const zoom = mapComponent.map.getZoom()
+            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            console.log(url)
+            if ($nationalMapLink) {
+                // only show this for the datasets we've added to the national map
+                $nationalMapLink.href = url
+                $nationalMapLink.classList.remove("js-hidden")
+            }
+        }
+    })
 </script>
 <script>
     // Initialise back to top
