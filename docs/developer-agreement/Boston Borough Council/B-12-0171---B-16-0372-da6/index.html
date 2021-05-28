@@ -161,13 +161,13 @@
             </dt>
             <dd class="govuk-summary-list__value">                2020-03-18            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
-            </dt>
-            <dd class="govuk-summary-list__value">                B/12/0171 &amp; B/16/0372            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">B/12/0171 &amp; B/16/0372-da6</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">planning-application
+            </dt>
+            <dd class="govuk-summary-list__value">                B/12/0171 &amp; B/16/0372            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -196,11 +196,11 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>developer-agreement</th>
             <th>developer-agreement-type</th>
             <th>organisation</th>
-            <th>start-date</th>
+            <th>developer-agreement</th>
             <th>document-url</th>
+            <th>start-date</th>
             <th>planning-application</th>
         </tr>
     </thead>
@@ -208,11 +208,11 @@
             <td>2020-06-30</td>
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/f837fdb379cdd6086be9d2b006cef4bdfb9f41ac65a0810cd8293499a135ebcf.csv#L11">f837fdb379cd...</a></td>
             <td>10</td>
-                <td>B/12/0171 &amp; B/16/0372-da6</td> 
                 <td>Unilateral Undertaking</td> 
                 <td>developer-agreement:Boston Borough Council</td> 
-                <td>2020-03-18</td> 
+                <td>B/12/0171 &amp; B/16/0372-da6</td> 
                 <td>https://www.mybostonuk.com/planning-application-search</td> 
+                <td>2020-03-18</td> 
                 <td>B/12/0171 &amp; B/16/0372</td> 
         </tr>    </tbody>
 </table>
@@ -328,7 +328,7 @@
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map

@@ -144,13 +144,13 @@
             </dt>
             <dd class="govuk-summary-list__value">                2019-11-06            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">IFS679</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">planning-application
             </dt>
             <dd class="govuk-summary-list__value">                18/03327/STPLF            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">document-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://newplanningaccess.eastriding.gov.uk/newplanningaccess/applicationDetails.do?activeTab=summary&keyVal=PGE17UBJ0GW00">https://newplanningaccess.eastriding.gov.uk/newplanningaccess/applicationDetails.do?activeTab=summary&keyVal=PGE17UBJ0GW00</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
@@ -158,9 +158,9 @@
 <span title="Organisation identifier: local-authority-eng:ERY" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:ERY)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">document-url
+            <dt class="govuk-summary-list__key">developer-agreement
             </dt>
-            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://newplanningaccess.eastriding.gov.uk/newplanningaccess/applicationDetails.do?activeTab=summary&keyVal=PGE17UBJ0GW00">https://newplanningaccess.eastriding.gov.uk/newplanningaccess/applicationDetails.do?activeTab=summary&keyVal=PGE17UBJ0GW00</a>            </dd>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">IFS679</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -189,8 +189,8 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>developer-agreement</th>
             <th>organisation</th>
+            <th>developer-agreement</th>
             <th>start-date</th>
             <th>document-url</th>
             <th>planning-application</th>
@@ -200,8 +200,8 @@
             <td>2020-12-31</td>
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/d5c7e4f72604f412c93621c00f39247efef6028a7ecb485fa44fdc1b76d37510.csv#L20">d5c7e4f72604...</a></td>
             <td>19</td>
-                <td>IFS679</td> 
                 <td>local-authority-eng:ERY</td> 
+                <td>IFS679</td> 
                 <td>2019-11-06</td> 
                 <td>https://newplanningaccess.eastriding.gov.uk/newplanningaccess/applicationDetails.do?activeTab=summary&amp;keyVal=PGE17UBJ0GW00</td> 
                 <td>18/03327/STPLF</td> 
@@ -319,7 +319,7 @@
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map

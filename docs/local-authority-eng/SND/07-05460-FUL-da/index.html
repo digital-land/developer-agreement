@@ -144,6 +144,10 @@
             </dt>
             <dd class="govuk-summary-list__value">                2008-05-16            </dd>
         </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">planning-application
+            </dt>
+            <dd class="govuk-summary-list__value">                07/05460/FUL            </dd>
+        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement-type
             </dt>
             <dd class="govuk-summary-list__value"><div>None
@@ -158,10 +162,6 @@
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">07/05460/FUL-da</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
-            </dt>
-            <dd class="govuk-summary-list__value">                07/05460/FUL            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
@@ -196,9 +196,9 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>developer-agreement</th>
             <th>developer-agreement-type</th>
             <th>organisation</th>
+            <th>developer-agreement</th>
             <th>start-date</th>
             <th>document-url</th>
             <th>planning-application</th>
@@ -208,9 +208,9 @@
             <td>2020-12-09</td>
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/ccf1710214131d07fdbcbda95b640a80578f09377f39f78959938cd8b2ac4ad6.csv#L64">ccf171021413...</a></td>
             <td>63</td>
-                <td>07/05460/FUL-da</td> 
                 <td>Section 106</td> 
                 <td>local-authority-eng:SND</td> 
+                <td>07/05460/FUL-da</td> 
                 <td>2008-05-16</td> 
                 <td>https://online-applications.sunderland.gov.uk/online-applications/applicationDetails.do?activeTab=documents&amp;keyVal=JT1PSSBB85000</td> 
                 <td>07/05460/FUL</td> 
@@ -328,7 +328,7 @@
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map

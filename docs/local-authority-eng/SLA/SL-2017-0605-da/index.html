@@ -144,13 +144,6 @@
             </dt>
             <dd class="govuk-summary-list__value">                2019-06-19            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement-type
-            </dt>
-            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/community-infrastructure-levy" class="govuk-link">Community infrastructure levy</a>
-<span title="developer-agreement-type identifier: community-infrastructure-levy" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>community-infrastructure-levy)</span>
-</div>
-            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/SLA" class="govuk-link">South Lakeland District Council</a>
@@ -164,6 +157,13 @@
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">SL/2017/0605-da</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">developer-agreement-type
+            </dt>
+            <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/community-infrastructure-levy" class="govuk-link">Community infrastructure levy</a>
+<span title="developer-agreement-type identifier: community-infrastructure-levy" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>community-infrastructure-levy)</span>
+</div>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -192,9 +192,9 @@
             <th>entry-date</th>
             <th>resource</th>
             <th>line</th>
-            <th>developer-agreement</th>
             <th>developer-agreement-type</th>
             <th>organisation</th>
+            <th>developer-agreement</th>
             <th>start-date</th>
             <th>planning-application</th>
         </tr>
@@ -203,9 +203,9 @@
             <td>2020-12-09</td>
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/c2b0b13e441a27f3e841349cede5bd015a034a95f26ecf23ced0c41df93ccd73.csv#L20">c2b0b13e441a...</a></td>
             <td>19</td>
-                <td>SL/2017/0605-da</td> 
                 <td>community-infrastructure-levy</td> 
                 <td>local-authority-eng:SLA</td> 
+                <td>SL/2017/0605-da</td> 
                 <td>2019-06-19</td> 
                 <td>SL/2017/0605</td> 
         </tr>    </tbody>
@@ -322,7 +322,7 @@
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
             const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/leaflet-spike/?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
             console.log(url)
             if ($nationalMapLink) {
                 // only show this for the datasets we've added to the national map
