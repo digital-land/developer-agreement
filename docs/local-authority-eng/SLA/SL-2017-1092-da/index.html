@@ -147,23 +147,23 @@
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
-            </dt>
-            <dd class="govuk-summary-list__value">                SL/2017/1092            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">SL/2017/1092-da</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2019-01-11            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/SLA" class="govuk-link">South Lakeland District Council</a>
 <span title="Organisation identifier: local-authority-eng:SLA" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:SLA)</span>
             </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                2019-01-11            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">planning-application
+            </dt>
+            <dd class="govuk-summary-list__value">                SL/2017/1092            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -193,10 +193,10 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
-            <th>developer-agreement-type</th>
-            <th>planning-application</th>
-            <th>start-date</th>
             <th>organisation</th>
+            <th>planning-application</th>
+            <th>developer-agreement-type</th>
+            <th>start-date</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -204,10 +204,10 @@
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/c2b0b13e441a27f3e841349cede5bd015a034a95f26ecf23ced0c41df93ccd73.csv#L24">c2b0b13e441a...</a></td>
             <td>23</td>
                 <td>SL/2017/1092-da</td> 
-                <td>community-infrastructure-levy</td> 
-                <td>SL/2017/1092</td> 
-                <td>2019-01-11</td> 
                 <td>local-authority-eng:SLA</td> 
+                <td>SL/2017/1092</td> 
+                <td>community-infrastructure-levy</td> 
+                <td>2019-01-11</td> 
         </tr>    </tbody>
 </table>
 
@@ -317,7 +317,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

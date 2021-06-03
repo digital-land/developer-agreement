@@ -146,6 +146,10 @@
 <span title="Organisation identifier: local-authority-eng:CHT" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:CHT)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">start-date
+            </dt>
+            <dd class="govuk-summary-list__value">                2020-02-25            </dd>
+        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement-type
             </dt>
             <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/community-infrastructure-levy" class="govuk-link">Community infrastructure levy</a>
@@ -160,10 +164,6 @@
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">19/01944/FUL_CIL</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2020-02-25            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -193,10 +193,10 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
-            <th>developer-agreement-type</th>
-            <th>planning-application</th>
-            <th>start-date</th>
             <th>organisation</th>
+            <th>planning-application</th>
+            <th>developer-agreement-type</th>
+            <th>start-date</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -204,10 +204,10 @@
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/e029cb76cbe7feac0697ba07b8e2a25b00c05cf3919da4c4f72b4d8670104f17.csv#L14">e029cb76cbe7...</a></td>
             <td>13</td>
                 <td>19/01944/FUL_CIL</td> 
-                <td>community-infrastructure-levy</td> 
-                <td>19/01944/FUL</td> 
-                <td>2020-02-25</td> 
                 <td>local-authority-eng:CHT</td> 
+                <td>19/01944/FUL</td> 
+                <td>community-infrastructure-levy</td> 
+                <td>2020-02-25</td> 
         </tr>    </tbody>
 </table>
 
@@ -317,7 +317,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

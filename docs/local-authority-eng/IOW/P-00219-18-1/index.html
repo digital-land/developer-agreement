@@ -140,23 +140,23 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/local-authority-eng/IOW/P-00219-18-1</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
+            <dt class="govuk-summary-list__key">planning-application
             </dt>
-            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/IOW" class="govuk-link">Isle of Wight Council</a>
-<span title="Organisation identifier: local-authority-eng:IOW" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:IOW)</span>
-            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2018-07-09            </dd>
+            <dd class="govuk-summary-list__value">                P/00219/18            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">document-url
             </dt>
             <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=35966">https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&id=35966</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
+            <dt class="govuk-summary-list__key">start-date
             </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">P/00219/18-1</span>            </dd>
+            <dd class="govuk-summary-list__value">                2018-07-09            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">organisation
+            </dt>
+            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/IOW" class="govuk-link">Isle of Wight Council</a>
+<span title="Organisation identifier: local-authority-eng:IOW" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:IOW)</span>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement-type
             </dt>
@@ -165,9 +165,9 @@
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
+            <dt class="govuk-summary-list__key">developer-agreement
             </dt>
-            <dd class="govuk-summary-list__value">                P/00219/18            </dd>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">P/00219/18-1</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -197,23 +197,23 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
+            <th>organisation</th>
+            <th>planning-application</th>
             <th>developer-agreement-type</th>
             <th>document-url</th>
-            <th>planning-application</th>
             <th>start-date</th>
-            <th>organisation</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2018-07-09</td>
-            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/8e2b008209b7407f229cde66e1fefed691a1f16b4ce58a271fa35b9b2dfa9bf1.csv#L10">8e2b008209b7...</a></td>
-            <td>9</td>
+            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/d52797a161fe2c232339532d8769dc202d3162bb05af1acc75c07537fd99730d.csv#L9">d52797a161fe...</a></td>
+            <td>8</td>
                 <td>P/00219/18-1</td> 
+                <td>local-authority-eng:IOW</td> 
+                <td>P/00219/18</td> 
                 <td>section-106</td> 
                 <td>https://www.iow.gov.uk/PlanningObligations/Download.ashx?type=Document&amp;id=35966</td> 
-                <td>P/00219/18</td> 
                 <td>2018-07-09</td> 
-                <td>local-authority-eng:IOW</td> 
         </tr>    </tbody>
 </table>
 
@@ -323,7 +323,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

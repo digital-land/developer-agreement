@@ -140,14 +140,6 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/local-authority-eng/BRX/07-09-0765-F-da</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">07/09/0765/F-da</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">document-url
-            </dt>
-            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://planning.broxbourne.gov.uk/Planning/dialog.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&Param=lg.Planning&ref_no=07/09/0765/F&viewdocs=true">https://planning.broxbourne.gov.uk/Planning/dialog.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&Param=lg.Planning&ref_no=07/09/0765/F&viewdocs=true</a>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">start-date
             </dt>
             <dd class="govuk-summary-list__value">                2010-05-11            </dd>
@@ -159,15 +151,23 @@
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
+            <dt class="govuk-summary-list__key">developer-agreement
             </dt>
-            <dd class="govuk-summary-list__value">                07/09/0765/F            </dd>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">07/09/0765/F-da</span>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/BRX" class="govuk-link">Broxbourne Borough Council</a>
 <span title="Organisation identifier: local-authority-eng:BRX" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:BRX)</span>
             </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">planning-application
+            </dt>
+            <dd class="govuk-summary-list__value">                07/09/0765/F            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">document-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://planning.broxbourne.gov.uk/Planning/dialog.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&Param=lg.Planning&ref_no=07/09/0765/F&viewdocs=true">https://planning.broxbourne.gov.uk/Planning/dialog.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&Param=lg.Planning&ref_no=07/09/0765/F&viewdocs=true</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -197,11 +197,11 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
+            <th>organisation</th>
+            <th>planning-application</th>
             <th>developer-agreement-type</th>
             <th>document-url</th>
-            <th>planning-application</th>
             <th>start-date</th>
-            <th>organisation</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -209,11 +209,11 @@
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/e8c140ee7c69173f6e6de8cb2c2fad5beb340203e435de93a485bcf548161986.csv#L8">e8c140ee7c69...</a></td>
             <td>7</td>
                 <td>07/09/0765/F-da</td> 
+                <td>local-authority-eng:BRX</td> 
+                <td>07/09/0765/F</td> 
                 <td>section-106</td> 
                 <td>https://planning.broxbourne.gov.uk/Planning/dialog.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;ref_no=07/09/0765/F&amp;viewdocs=true</td> 
-                <td>07/09/0765/F</td> 
                 <td>2010-05-11</td> 
-                <td>local-authority-eng:BRX</td> 
         </tr>    </tbody>
 </table>
 
@@ -323,7 +323,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

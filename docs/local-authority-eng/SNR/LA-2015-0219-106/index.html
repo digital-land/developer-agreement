@@ -183,8 +183,8 @@
     </thead>
     <tbody>        <tr>
             <td>2021-03-25</td>
-            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/31e233319b082fed11b3e2336c51d757a8a121ac7c6caf8a97f3cbe8ee411a76.csv#L16">31e233319b08...</a></td>
-            <td>15</td>
+            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/31e233319b082fed11b3e2336c51d757a8a121ac7c6caf8a97f3cbe8ee411a76.csv#L14">31e233319b08...</a></td>
+            <td>13</td>
                 <td>LA/2015/0219/106</td> 
                 <td>local-authority-eng:SNR</td> 
         </tr>    </tbody>
@@ -296,7 +296,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

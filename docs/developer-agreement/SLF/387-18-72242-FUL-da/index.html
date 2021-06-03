@@ -153,17 +153,17 @@
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">document-url
+            <dt class="govuk-summary-list__key">start-date
             </dt>
-            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.salford.gov.uk/media/396014/387-72242.pdf">https://www.salford.gov.uk/media/396014/387-72242.pdf</a>            </dd>
+            <dd class="govuk-summary-list__value">                2019-07-08            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">planning-application
             </dt>
             <dd class="govuk-summary-list__value">                18/72242/FUL            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
+            <dt class="govuk-summary-list__key">document-url
             </dt>
-            <dd class="govuk-summary-list__value">                2019-07-08            </dd>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.salford.gov.uk/media/396014/387-72242.pdf">https://www.salford.gov.uk/media/396014/387-72242.pdf</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
@@ -197,11 +197,11 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
+            <th>organisation</th>
+            <th>planning-application</th>
             <th>developer-agreement-type</th>
             <th>document-url</th>
-            <th>planning-application</th>
             <th>start-date</th>
-            <th>organisation</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -209,11 +209,11 @@
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/3a60c2546d08242f531946e2001f0b654354131e67b09cdad871b66b71ef6847.csv#L5">3a60c2546d08...</a></td>
             <td>4</td>
                 <td>387-18/72242/FUL-da</td> 
+                <td>developer-agreement:SLF</td> 
+                <td>18/72242/FUL</td> 
                 <td>section-106</td> 
                 <td>https://www.salford.gov.uk/media/396014/387-72242.pdf</td> 
-                <td>18/72242/FUL</td> 
                 <td>2019-07-08</td> 
-                <td>developer-agreement:SLF</td> 
         </tr>    </tbody>
 </table>
 
@@ -323,7 +323,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()

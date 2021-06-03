@@ -140,23 +140,17 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/local-authority-eng/SLA/SL-2018-0814-da2</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">document-url
-            </dt>
-            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://applications.southlakeland.gov.uk/fastweb/detail.asp?AltRef=SL/2018/0814&ApplicationNumber=SL%2F2018%2F0814&AddressPrefix=&Postcode=&Submit=Search">https://applications.southlakeland.gov.uk/fastweb/detail.asp?AltRef=SL/2018/0814&ApplicationNumber=SL%2F2018%2F0814&AddressPrefix=&Postcode=&Submit=Search</a>            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">planning-application
             </dt>
             <dd class="govuk-summary-list__value">                SL/2018/0814            </dd>
         </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">document-url
+            </dt>
+            <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://applications.southlakeland.gov.uk/fastweb/detail.asp?AltRef=SL/2018/0814&ApplicationNumber=SL%2F2018%2F0814&AddressPrefix=&Postcode=&Submit=Search">https://applications.southlakeland.gov.uk/fastweb/detail.asp?AltRef=SL/2018/0814&ApplicationNumber=SL%2F2018%2F0814&AddressPrefix=&Postcode=&Submit=Search</a>            </dd>
+        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">start-date
             </dt>
             <dd class="govuk-summary-list__value">                2019-04-25            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
-            </dt>
-            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/SLA" class="govuk-link">South Lakeland District Council</a>
-<span title="Organisation identifier: local-authority-eng:SLA" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:SLA)</span>
-            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">developer-agreement-type
             </dt>
@@ -168,6 +162,12 @@
             <dt class="govuk-summary-list__key">developer-agreement
             </dt>
             <dd class="govuk-summary-list__value">                <span class="dl-select-all">SL/2018/0814-da2</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">organisation
+            </dt>
+            <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/SLA" class="govuk-link">South Lakeland District Council</a>
+<span title="Organisation identifier: local-authority-eng:SLA" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:SLA)</span>
+            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -197,11 +197,11 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement</th>
+            <th>organisation</th>
+            <th>planning-application</th>
             <th>developer-agreement-type</th>
             <th>document-url</th>
-            <th>planning-application</th>
             <th>start-date</th>
-            <th>organisation</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -209,11 +209,11 @@
             <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/c2b0b13e441a27f3e841349cede5bd015a034a95f26ecf23ced0c41df93ccd73.csv#L37">c2b0b13e441a...</a></td>
             <td>36</td>
                 <td>SL/2018/0814-da2</td> 
+                <td>local-authority-eng:SLA</td> 
+                <td>SL/2018/0814</td> 
                 <td>section-106</td> 
                 <td>https://applications.southlakeland.gov.uk/fastweb/detail.asp?AltRef=SL/2018/0814&amp;ApplicationNumber=SL%2F2018%2F0814&amp;AddressPrefix=&amp;Postcode=&amp;Submit=Search</td> 
-                <td>SL/2018/0814</td> 
                 <td>2019-04-25</td> 
-                <td>local-authority-eng:SLA</td> 
         </tr>    </tbody>
 </table>
 
@@ -323,7 +323,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
