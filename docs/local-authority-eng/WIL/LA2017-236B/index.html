@@ -138,32 +138,32 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/local-authority-eng/WIL/LA2017-236B</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
+            <dt class="govuk-summary-list__key">Developer agreement
+            </dt>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">LA2017/236B</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Start date
             </dt>
             <dd class="govuk-summary-list__value">                2019-10-15            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
+            <dt class="govuk-summary-list__key">Organisation
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/WIL" class="govuk-link">Wiltshire Council</a>
 <span title="Organisation identifier: local-authority-eng:WIL" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>local-authority-eng:WIL)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement-type
+            <dt class="govuk-summary-list__key">Developer agreement type
             </dt>
             <dd class="govuk-summary-list__value"><div><a href="https://digital-land.github.io/developer-agreement-type/community-infrastructure-levy" class="govuk-link">Community infrastructure levy</a>
 <span title="developer-agreement-type identifier: community-infrastructure-levy" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>community-infrastructure-levy)</span>
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
-            </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">LA2017/236B</span>            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
+            <dt class="govuk-summary-list__key">Planning application
             </dt>
             <dd class="govuk-summary-list__value">                16/11728/CIL            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">entry-date
+            <dt class="govuk-summary-list__key">Entry date
             </dt>
             <dd class="govuk-summary-list__value">                2020-04-15            </dd>
         </div>    
@@ -189,21 +189,21 @@
             <th>resource</th>
             <th>line</th>
             <th>developer-agreement-type</th>
+            <th>developer-agreement</th>
+            <th>planning-application</th>
             <th>start-date</th>
             <th>organisation</th>
-            <th>planning-application</th>
-            <th>developer-agreement</th>
         </tr>
     </thead>
     <tbody>        <tr>
             <td>2020-04-15</td>
-            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/5271fcd3ee120860e43f9384540f0b571450a9a309312b6e2e94931757a3bb6f.csv#L70">5271fcd3ee12...</a></td>
-            <td>69</td>
+            <td><a href="https://github.com/digital-land/developer-agreement-collection/tree/main/transformed/developer-agreement/5271fcd3ee120860e43f9384540f0b571450a9a309312b6e2e94931757a3bb6f.csv#L71">5271fcd3ee12...</a></td>
+            <td>70</td>
                 <td>community-infrastructure-levy</td> 
+                <td>LA2017/236B</td> 
+                <td>16/11728/CIL</td> 
                 <td>2019-10-15</td> 
                 <td>local-authority-eng:WIL</td> 
-                <td>16/11728/CIL</td> 
-                <td>LA2017/236B</td> 
         </tr>    </tbody>
 </table>
 
@@ -312,21 +312,24 @@
     const datasetName = "developer-agreement"
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
-    const mapComponent = new DLMaps.Map($mapElement).init({
-        initZoomCallback: function (featureGroup) {
-            console.log("initial load completed")
-            // do we need to check there isn't more than one shape?
-            const center = featureGroup.getBounds().getCenter()
-            const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
-            console.log(url)
-            if ($nationalMapLink) {
-                // only show this for the datasets we've added to the national map
-                $nationalMapLink.href = url
-                $nationalMapLink.classList.remove("js-hidden")
-            }
-        }
-    })
+    const mapParams = {
+    initZoomCallback: function (featureGroup, map) {
+          console.log("initial load completed")
+          // do we need to check there isn't more than one shape?
+          const center = featureGroup.getBounds().getCenter()
+          const zoom = map.getZoom()
+          let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+          console.log(url)
+          if ($nationalMapLink) {
+              // only show this for the datasets we've added to the national map
+              $nationalMapLink.href = url
+              $nationalMapLink.classList.remove("js-hidden")
+          }
+      }
+    }
+
+
+    const mapComponent = new DLMaps.Map($mapElement).init(mapParams)
 </script>
 <script>
     // Initialise back to top

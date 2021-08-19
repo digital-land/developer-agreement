@@ -138,36 +138,36 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/developer-agreement/developer-agreement/Boston Borough Council/B-19-0169-da</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement-type
+            <dt class="govuk-summary-list__key">Developer agreement type
             </dt>
             <dd class="govuk-summary-list__value"><div>None
 <span title="developer-agreement-type identifier: Deed of Variation" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">developer-agreement-type identifier is </span>Deed of Variation)</span>
 </div>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">start-date
-            </dt>
-            <dd class="govuk-summary-list__value">                2019-09-27            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">document-url
+            <dt class="govuk-summary-list__key">Document URL
             </dt>
             <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.mybostonuk.com/planning-application-search">https://www.mybostonuk.com/planning-application-search</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">developer-agreement
+            <dt class="govuk-summary-list__key">Start date
             </dt>
-            <dd class="govuk-summary-list__value">                <span class="dl-select-all">B/19/0169-da</span>            </dd>
+            <dd class="govuk-summary-list__value">                2019-09-27            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">planning-application
-            </dt>
-            <dd class="govuk-summary-list__value">                B/19/0169            </dd>
-        </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">organisation
+            <dt class="govuk-summary-list__key">Organisation
             </dt>
             <dd class="govuk-summary-list__value">
 <span title="Organisation identifier: developer-agreement:Boston Borough Council" class="govuk-!-font-size-16 secondary-text data-reference">(<span class="govuk-visually-hidden">Organisation identifier is </span>developer-agreement:Boston Borough Council)</span>
             </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">entry-date
+            <dt class="govuk-summary-list__key">Planning application
+            </dt>
+            <dd class="govuk-summary-list__value">                B/19/0169            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Developer agreement
+            </dt>
+            <dd class="govuk-summary-list__value">                <span class="dl-select-all">B/19/0169-da</span>            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Entry date
             </dt>
             <dd class="govuk-summary-list__value">                2020-10-19            </dd>
         </div>    
@@ -194,10 +194,10 @@
             <th>line</th>
             <th>developer-agreement-type</th>
             <th>document-url</th>
-            <th>start-date</th>
-            <th>organisation</th>
             <th>planning-application</th>
             <th>developer-agreement</th>
+            <th>start-date</th>
+            <th>organisation</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -206,10 +206,10 @@
             <td>5</td>
                 <td>Deed of Variation</td> 
                 <td>https://www.mybostonuk.com/planning-application-search</td> 
-                <td>2019-09-27</td> 
-                <td>developer-agreement:Boston Borough Council</td> 
                 <td>B/19/0169</td> 
                 <td>B/19/0169-da</td> 
+                <td>2019-09-27</td> 
+                <td>developer-agreement:Boston Borough Council</td> 
         </tr>    </tbody>
 </table>
 
@@ -318,21 +318,24 @@
     const datasetName = "developer-agreement"
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
-    const mapComponent = new DLMaps.Map($mapElement).init({
-        initZoomCallback: function (featureGroup) {
-            console.log("initial load completed")
-            // do we need to check there isn't more than one shape?
-            const center = featureGroup.getBounds().getCenter()
-            const zoom = mapComponent.map.getZoom()
-            let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
-            console.log(url)
-            if ($nationalMapLink) {
-                // only show this for the datasets we've added to the national map
-                $nationalMapLink.href = url
-                $nationalMapLink.classList.remove("js-hidden")
-            }
-        }
-    })
+    const mapParams = {
+    initZoomCallback: function (featureGroup, map) {
+          console.log("initial load completed")
+          // do we need to check there isn't more than one shape?
+          const center = featureGroup.getBounds().getCenter()
+          const zoom = map.getZoom()
+          let url = `http://digital-land.github.io/map?layer=${datasetName}#${center.lat},${center.lng},${zoom}z`
+          console.log(url)
+          if ($nationalMapLink) {
+              // only show this for the datasets we've added to the national map
+              $nationalMapLink.href = url
+              $nationalMapLink.classList.remove("js-hidden")
+          }
+      }
+    }
+
+
+    const mapComponent = new DLMaps.Map($mapElement).init(mapParams)
 </script>
 <script>
     // Initialise back to top
