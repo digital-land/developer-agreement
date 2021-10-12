@@ -1,0 +1,4058 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8">
+    <title> | Digital Land</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="shortcut icon" sizes="48x48" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" sizes="32x32" href="/images/favicon-32x32.png" type="image/png">
+<link rel="shortcut icon" sizes="16x16" href="/images/favicon-16x16.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    	<meta name="digital-land:template" content="page-per-thing/index.html">	<link href="https://digital-land.github.io/stylesheets/dl-frontend.css" rel="stylesheet" />
+<script src="https://digital-land.github.io/javascripts/dl-maps.js"></script>
+    <meta property="og:image" content="/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+<!-- Cookie banner partial version 1.0.1 -->
+<div id="global-cookie-message" class="govuk-clearfix global-cookie-message" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="">
+
+  <div id="cookie-banner" class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="cookie-banner__message govuk-!-margin-top-6">
+          <h2 class="govuk-heading-m">Tell us whether you accept cookies</h2>
+          <p class="govuk-body">We use <a class="govuk-link" href="/cookies">cookies to collect information</a> about how you use the Digital Land website to make the website work as well as possible.</p>
+        </div>
+        <div class="cooke-banner__buttons govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <button class="govuk-button" onclick="acceptCookies();showCookieConfirmation();">Accept all cookies</button>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <a class="govuk-button" href="/cookies">Set cookie preferences</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-confirmation" class="govuk-width-container govuk-!-padding-top-6" tabindex="-1" style="display: none;">
+    <p class="cookie-banner__confirmation-message govuk-body">You’ve accepted all cookies. You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+    <button class="cookie-banner__hide-button govuk-button govuk-button--secondary" onclick="document.getElementById('cookie-confirmation').style.display='none';">Hide</button>
+  </div>
+
+</div><header role="banner" id="global-header" class="govuk-header  with-proposition dl-header" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="header-proposition">
+      <div class="govuk-header__content">
+        <a href="https://digital-land.github.io/" class="govuk-header__link govuk-header__link--service-name">
+        Digital Land
+        </a>
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>        <nav>
+          <ul id="navigation" class="govuk-header__navigation" aria-label="Top Level Navigation">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/about">Team</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/project/">Projects</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/weeknote/">Weeknotes</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/blog-post/">Blog</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/guidance/">Guidance</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/dataset/">Datasets</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/organisation/">Organisations</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="/map/">Map</a>
+            </li>
+          </ul>
+        </nav>
+</div>
+    </div>
+  </div>
+</header>
+
+      <div class="govuk-width-container ">
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  prototype
+</strong><span class="govuk-phase-banner__text">
+      This is a prototype. Please provide feedback to the Digital Land team.
+    </span>
+  </p>
+</div><div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/">Digital Land</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../../">Developer Agreement</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../">Local Authority Eng</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">GRE</li>
+  </ol>
+</div>        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 id="index-title" class="govuk-heading-xl"></h1>
+ 
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <div class="dlf-feedback dlf-feedback--stacked dlf-feedback--flush">
+    <div class="dlf-feedback__prompt">
+        <div class="dlf-feedback__prompt-content">
+            <span class="dlf-feedback__prompt-content__text">Have you spotted any issues with the data?</span>
+        </div>
+        <div class="dlf-feedback__prompt-action">
+            <a href="mailto:digitalLand@communities.gov.uk?subject=Feedback on  data" class="govuk-button dlf-feedback__prompt__link">Provide feedback</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+               
+
+    <form class="filter-organisations-list__form govuk-!-margin-bottom-9" data-filter="form">
+        <label class="filter-list__label govuk-label govuk-!-font-weight-bold" for="filter-organisations-list">I'm looking for</label>
+        <input class="filter-list__input govuk-input" type="text" id="filter-organisations-list" placeholder="For example, Harrogate Borough Council">
+    </form>
+    <div class="js-no-filter-list-matches"><p class="govuk-body">No matches.</p></div> <!-- needs to go outside of index-list-wrapper -->
+
+
+        <div class="index-list-wrapper">
+            <div class="count-wrapper">
+                <p class="govuk-body" aria-hidden="true">Showing <span class="js-list-count">370</span> records.</p>
+                <p class="govuk-visually-hidden">There are
+                    <span class="js-accessible-list-count">370</span>
+                    records listed.
+                </p>
+            </div>        <form action="" class="govuk-form govuk-!-margin-bottom-4 dl-historical-toggle-form js-hidden" data-historical="form">
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hsitorical" name="hsitorical" type="checkbox" value="show">
+                    <label class="govuk-label govuk-checkboxes__label" for="hsitorical">
+                    Show historical records
+                    </label>
+                </div>
+            </div>
+        </form>
+<table class="dl-index-list"
+ data-filter="list" data-historical='list'>
+  <tbody>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00001" data-filter="match-content">CIL-00001</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 11/1653/RT</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00003" data-filter="match-content">CIL-00003</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1677/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00005" data-filter="match-content">CIL-00005</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1645/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00009" data-filter="match-content">CIL-00009</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2153/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00014" data-filter="match-content">CIL-00014</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0186/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00015" data-filter="match-content">CIL-00015</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1536/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00016" data-filter="match-content">CIL-00016</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2414/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00017" data-filter="match-content">CIL-00017</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1051/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00018" data-filter="match-content">CIL-00018</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2056/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00036" data-filter="match-content">CIL-00036</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2514/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00048" data-filter="match-content">CIL-00048</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3572/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00053" data-filter="match-content">CIL-00053</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3459/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00060" data-filter="match-content">CIL-00060</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3551/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00064" data-filter="match-content">CIL-00064</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1229/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00068" data-filter="match-content">CIL-00068</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3609/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00071" data-filter="match-content">CIL-00071</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2512/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00075" data-filter="match-content">CIL-00075</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1792/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00086" data-filter="match-content">CIL-00086</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0273/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00092" data-filter="match-content">CIL-00092</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1579/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00102" data-filter="match-content">CIL-00102</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0016/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00108" data-filter="match-content">CIL-00108</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1527/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00109" data-filter="match-content">CIL-00109</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1622/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00120" data-filter="match-content">CIL-00120</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2009/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00121" data-filter="match-content">CIL-00121</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1500/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00134" data-filter="match-content">CIL-00134</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/4016/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00137" data-filter="match-content">CIL-00137</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0891/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00140" data-filter="match-content">CIL-00140</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1863/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00143" data-filter="match-content">CIL-00143</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3770/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00147" data-filter="match-content">CIL-00147</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1621/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00148" data-filter="match-content">CIL-00148</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2230/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00149" data-filter="match-content">CIL-00149</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2126/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00150" data-filter="match-content">CIL-00150</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2910/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00152" data-filter="match-content">CIL-00152</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3295/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00156" data-filter="match-content">CIL-00156</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1582/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00163" data-filter="match-content">CIL-00163</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2008/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00164" data-filter="match-content">CIL-00164</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2159/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00170" data-filter="match-content">CIL-00170</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2175/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00183" data-filter="match-content">CIL-00183</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2000/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00184" data-filter="match-content">CIL-00184</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2018/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00187" data-filter="match-content">CIL-00187</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2186/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00191" data-filter="match-content">CIL-00191</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0582/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00202" data-filter="match-content">CIL-00202</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2133/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00203" data-filter="match-content">CIL-00203</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2163/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00207" data-filter="match-content">CIL-00207</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3725/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00209" data-filter="match-content">CIL-00209</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1204/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00318" data-filter="match-content">CIL-00318</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2874/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00319" data-filter="match-content">CIL-00319</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2849/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00333" data-filter="match-content">CIL-00333</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1428/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00355" data-filter="match-content">CIL-00355</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2370/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00422" data-filter="match-content">CIL-00422</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1091/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00423" data-filter="match-content">CIL-00423</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1092/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00424" data-filter="match-content">CIL-00424</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/3036/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00425" data-filter="match-content">CIL-00425</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0364/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00426" data-filter="match-content">CIL-00426</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1325/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00427" data-filter="match-content">CIL-00427</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 10/3118/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00429" data-filter="match-content">CIL-00429</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1104/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00430" data-filter="match-content">CIL-00430</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1701/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00431" data-filter="match-content">CIL-00431</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1708/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00432" data-filter="match-content">CIL-00432</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2822/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00433" data-filter="match-content">CIL-00433</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2865/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00434" data-filter="match-content">CIL-00434</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0437/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00435" data-filter="match-content">CIL-00435</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0544/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00436" data-filter="match-content">CIL-00436</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1668/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00437" data-filter="match-content">CIL-00437</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0959/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00439" data-filter="match-content">CIL-00439</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1678/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00440" data-filter="match-content">CIL-00440</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1977/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00441" data-filter="match-content">CIL-00441</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3007/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00443" data-filter="match-content">CIL-00443</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0519/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00444" data-filter="match-content">CIL-00444</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0293/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00445" data-filter="match-content">CIL-00445</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0850/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00446" data-filter="match-content">CIL-00446</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1355/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00447" data-filter="match-content">CIL-00447</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2930/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00448" data-filter="match-content">CIL-00448</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0135/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00449" data-filter="match-content">CIL-00449</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1127/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00450" data-filter="match-content">CIL-00450</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0460/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00451" data-filter="match-content">CIL-00451</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1997/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00452" data-filter="match-content">CIL-00452</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3486/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00453" data-filter="match-content">CIL-00453</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0633/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00455" data-filter="match-content">CIL-00455</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0783/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00460" data-filter="match-content">CIL-00460</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3682/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00462" data-filter="match-content">CIL-00462</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2779/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00463" data-filter="match-content">CIL-00463</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0959/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00464" data-filter="match-content">CIL-00464</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1801/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00465" data-filter="match-content">CIL-00465</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2819/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00466" data-filter="match-content">CIL-00466</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0419/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00467" data-filter="match-content">CIL-00467</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1393/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00468" data-filter="match-content">CIL-00468</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0512/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00469" data-filter="match-content">CIL-00469</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1966/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00470" data-filter="match-content">CIL-00470</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/3119/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00472" data-filter="match-content">CIL-00472</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0332/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00474" data-filter="match-content">CIL-00474</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1592/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00476" data-filter="match-content">CIL-00476</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0821/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00477" data-filter="match-content">CIL-00477</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1268/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00478" data-filter="match-content">CIL-00478</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1646/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00479" data-filter="match-content">CIL-00479</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1841/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00482" data-filter="match-content">CIL-00482</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2778/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00483" data-filter="match-content">CIL-00483</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3036/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00485" data-filter="match-content">CIL-00485</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1938/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00486" data-filter="match-content">CIL-00486</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1739/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00489" data-filter="match-content">CIL-00489</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2293/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00490" data-filter="match-content">CIL-00490</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0451/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00491" data-filter="match-content">CIL-00491</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 11/2229/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00492" data-filter="match-content">CIL-00492</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0584/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00493" data-filter="match-content">CIL-00493</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0835/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00494" data-filter="match-content">CIL-00494</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1362/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00495" data-filter="match-content">CIL-00495</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1413/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00496" data-filter="match-content">CIL-00496</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1562/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00498" data-filter="match-content">CIL-00498</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2592/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00499" data-filter="match-content">CIL-00499</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2694/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00500" data-filter="match-content">CIL-00500</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1024/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00502" data-filter="match-content">CIL-00502</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0949/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00505" data-filter="match-content">CIL-00505</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3103/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00506" data-filter="match-content">CIL-00506</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0942/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00507" data-filter="match-content">CIL-00507</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0679/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00508" data-filter="match-content">CIL-00508</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0867/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00509" data-filter="match-content">CIL-00509</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1054/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00510" data-filter="match-content">CIL-00510</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1469/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00511" data-filter="match-content">CIL-00511</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2333/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00512" data-filter="match-content">CIL-00512</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2417/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00513" data-filter="match-content">CIL-00513</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3999/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00517" data-filter="match-content">CIL-00517</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2823/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00520" data-filter="match-content">CIL-00520</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3295/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00522" data-filter="match-content">CIL-00522</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1266/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00523" data-filter="match-content">CIL-00523</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1734/PN2</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00524" data-filter="match-content">CIL-00524</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2474/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00528" data-filter="match-content">CIL-00528</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2543/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00531" data-filter="match-content">CIL-00531</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2465/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00532" data-filter="match-content">CIL-00532</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2529/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00533" data-filter="match-content">CIL-00533</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0326/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00536" data-filter="match-content">CIL-00536</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2798/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00539" data-filter="match-content">CIL-00539</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0109/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00540" data-filter="match-content">CIL-00540</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2499/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00541" data-filter="match-content">CIL-00541</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2740/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00542" data-filter="match-content">CIL-00542</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1389/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00545" data-filter="match-content">CIL-00545</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3408/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00548" data-filter="match-content">CIL-00548</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1230/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00551" data-filter="match-content">CIL-00551</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2447/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00552" data-filter="match-content">CIL-00552</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2361/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00555" data-filter="match-content">CIL-00555</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0973/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00556" data-filter="match-content">CIL-00556</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2046/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00557" data-filter="match-content">CIL-00557</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2113/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00560" data-filter="match-content">CIL-00560</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3941/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00561" data-filter="match-content">CIL-00561</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2481/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00562" data-filter="match-content">CIL-00562</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2862/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00563" data-filter="match-content">CIL-00563</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1699/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00566" data-filter="match-content">CIL-00566</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2580/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00567" data-filter="match-content">CIL-00567</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2871/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00569" data-filter="match-content">CIL-00569</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1130/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00570" data-filter="match-content">CIL-00570</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1806/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00572" data-filter="match-content">CIL-00572</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1799/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00574" data-filter="match-content">CIL-00574</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3565/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00575" data-filter="match-content">CIL-00575</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0487/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00576" data-filter="match-content">CIL-00576</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0494/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00577" data-filter="match-content">CIL-00577</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1682/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00578" data-filter="match-content">CIL-00578</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2016/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00579" data-filter="match-content">CIL-00579</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3763/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00580" data-filter="match-content">CIL-00580</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0612/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00581" data-filter="match-content">CIL-00581</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0655/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00582" data-filter="match-content">CIL-00582</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1282/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00583" data-filter="match-content">CIL-00583</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2971/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00584" data-filter="match-content">CIL-00584</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3214/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00585" data-filter="match-content">CIL-00585</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3400/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00588" data-filter="match-content">CIL-00588</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1079/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00589" data-filter="match-content">CIL-00589</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0230/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00590" data-filter="match-content">CIL-00590</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1201/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00592" data-filter="match-content">CIL-00592</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1109/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00593" data-filter="match-content">CIL-00593</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0289/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00594" data-filter="match-content">CIL-00594</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0336/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00595" data-filter="match-content">CIL-00595</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0353/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00600" data-filter="match-content">CIL-00600</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1101/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00601" data-filter="match-content">CIL-00601</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1168/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00602" data-filter="match-content">CIL-00602</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2760/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00603" data-filter="match-content">CIL-00603</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2841/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00604" data-filter="match-content">CIL-00604</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/3092/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00605" data-filter="match-content">CIL-00605</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/3058/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00606" data-filter="match-content">CIL-00606</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0691/RT</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00607" data-filter="match-content">CIL-00607</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1204/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00609" data-filter="match-content">CIL-00609</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/3119/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00611" data-filter="match-content">CIL-00611</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2757/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00613" data-filter="match-content">CIL-00613</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0604/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00614" data-filter="match-content">CIL-00614</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/0589/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00615" data-filter="match-content">CIL-00615</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1421/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00617" data-filter="match-content">CIL-00617</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0694/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00618" data-filter="match-content">CIL-00618</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1278/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00622" data-filter="match-content">CIL-00622</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0784/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00623" data-filter="match-content">CIL-00623</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1187/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00624" data-filter="match-content">CIL-00624</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1335/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00625" data-filter="match-content">CIL-00625</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1636/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00626" data-filter="match-content">CIL-00626</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2766/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00627" data-filter="match-content">CIL-00627</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2433/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00628" data-filter="match-content">CIL-00628</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1038/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00629" data-filter="match-content">CIL-00629</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1784/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00630" data-filter="match-content">CIL-00630</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2581/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00631" data-filter="match-content">CIL-00631</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3410/NM</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00632" data-filter="match-content">CIL-00632</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3643/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00633" data-filter="match-content">CIL-00633</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0752/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00634" data-filter="match-content">CIL-00634</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1372/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00635" data-filter="match-content">CIL-00635</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2351/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00636" data-filter="match-content">CIL-00636</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2369/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00637" data-filter="match-content">CIL-00637</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2944/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00639" data-filter="match-content">CIL-00639</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2550/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00640" data-filter="match-content">CIL-00640</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2733/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00641" data-filter="match-content">CIL-00641</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2332/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00643" data-filter="match-content">CIL-00643</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1858/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00645" data-filter="match-content">CIL-00645</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1261/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00646" data-filter="match-content">CIL-00646</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1708/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00648" data-filter="match-content">CIL-00648</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0132/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00649" data-filter="match-content">CIL-00649</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0083/PN2</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00650" data-filter="match-content">CIL-00650</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1775/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00651" data-filter="match-content">CIL-00651</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1876/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00652" data-filter="match-content">CIL-00652</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2624/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00654" data-filter="match-content">CIL-00654</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2607/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00656" data-filter="match-content">CIL-00656</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0418/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00660" data-filter="match-content">CIL-00660</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2152/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00661" data-filter="match-content">CIL-00661</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1179/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00663" data-filter="match-content">CIL-00663</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2586/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00665" data-filter="match-content">CIL-00665</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0197/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00666" data-filter="match-content">CIL-00666</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0919/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00667" data-filter="match-content">CIL-00667</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1394/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00668" data-filter="match-content">CIL-00668</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1708/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00669" data-filter="match-content">CIL-00669</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2276/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00671" data-filter="match-content">CIL-00671</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0699/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00672" data-filter="match-content">CIL-00672</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3555/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00673" data-filter="match-content">CIL-00673</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1717/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00674" data-filter="match-content">CIL-00674</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3102/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00675" data-filter="match-content">CIL-00675</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0029/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00678" data-filter="match-content">CIL-00678</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/1112/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00679" data-filter="match-content">CIL-00679</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2530/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00680" data-filter="match-content">CIL-00680</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2596/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00681" data-filter="match-content">CIL-00681</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2907/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00683" data-filter="match-content">CIL-00683</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0269/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00686" data-filter="match-content">CIL-00686</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1982/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00689" data-filter="match-content">CIL-00689</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1324/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00690" data-filter="match-content">CIL-00690</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1664/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00692" data-filter="match-content">CIL-00692</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2123/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00695" data-filter="match-content">CIL-00695</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2387/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00699" data-filter="match-content">CIL-00699</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2491/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00700" data-filter="match-content">CIL-00700</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0452/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00703" data-filter="match-content">CIL-00703</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2407/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00704" data-filter="match-content">CIL-00704</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0074/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00705" data-filter="match-content">CIL-00705</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1538/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00707" data-filter="match-content">CIL-00707</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2868/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00708" data-filter="match-content">CIL-00708</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3009/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00709" data-filter="match-content">CIL-00709</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0138/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00710" data-filter="match-content">CIL-00710</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1263/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00711" data-filter="match-content">CIL-00711</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1329/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00712" data-filter="match-content">CIL-00712</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/1940/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00713" data-filter="match-content">CIL-00713</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/3138/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00714" data-filter="match-content">CIL-00714</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0321/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00715" data-filter="match-content">CIL-00715</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/0430/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00716" data-filter="match-content">CIL-00716</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/2840/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00717" data-filter="match-content">CIL-00717</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/0161/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00718" data-filter="match-content">CIL-00718</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/1860/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00719" data-filter="match-content">CIL-00719</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/3073/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00720" data-filter="match-content">CIL-00720</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0515/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00722" data-filter="match-content">CIL-00722</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1788/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00723" data-filter="match-content">CIL-00723</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2669/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00724" data-filter="match-content">CIL-00724</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3010/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00725" data-filter="match-content">CIL-00725</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3142/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00726" data-filter="match-content">CIL-00726</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3795/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00727" data-filter="match-content">CIL-00727</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3504/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-00728" data-filter="match-content">CIL-00728</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2889/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01409" data-filter="match-content">CIL-01409</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2016/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01421" data-filter="match-content">CIL-01421</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0086/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01442" data-filter="match-content">CIL-01442</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 12/3124/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01443" data-filter="match-content">CIL-01443</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2807/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01452" data-filter="match-content">CIL-01452</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 13/2996/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01454" data-filter="match-content">CIL-01454</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1892/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01458" data-filter="match-content">CIL-01458</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2783/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01461" data-filter="match-content">CIL-01461</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2410/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01472" data-filter="match-content">CIL-01472</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3357/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01474" data-filter="match-content">CIL-01474</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3328/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01477" data-filter="match-content">CIL-01477</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3545/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01480" data-filter="match-content">CIL-01480</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3508/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01485" data-filter="match-content">CIL-01485</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0110/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01486" data-filter="match-content">CIL-01486</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0604/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01487" data-filter="match-content">CIL-01487</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0604/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01492" data-filter="match-content">CIL-01492</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/1799/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01494" data-filter="match-content">CIL-01494</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3980/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01499" data-filter="match-content">CIL-01499</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3900/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01506" data-filter="match-content">CIL-01506</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/4105/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01520" data-filter="match-content">CIL-01520</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3025/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01526" data-filter="match-content">CIL-01526</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2625/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01534" data-filter="match-content">CIL-01534</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/2309/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01535" data-filter="match-content">CIL-01535</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/1426/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01543" data-filter="match-content">CIL-01543</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/4125/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01550" data-filter="match-content">CIL-01550</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0089/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01552" data-filter="match-content">CIL-01552</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0048/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01581" data-filter="match-content">CIL-01581</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0599/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01584" data-filter="match-content">CIL-01584</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0460/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01585" data-filter="match-content">CIL-01585</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0261/PN2</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01590" data-filter="match-content">CIL-01590</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0755/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01627" data-filter="match-content">CIL-01627</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1240/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01637" data-filter="match-content">CIL-01637</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1377/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01641" data-filter="match-content">CIL-01641</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1441/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01651" data-filter="match-content">CIL-01651</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0453/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01657" data-filter="match-content">CIL-01657</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0630/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01662" data-filter="match-content">CIL-01662</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1610/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01663" data-filter="match-content">CIL-01663</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1795/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01665" data-filter="match-content">CIL-01665</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1460/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01675" data-filter="match-content">CIL-01675</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1805/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01680" data-filter="match-content">CIL-01680</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/0898/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01683" data-filter="match-content">CIL-01683</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2261/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01705" data-filter="match-content">CIL-01705</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0897/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01708" data-filter="match-content">CIL-01708</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0672/R</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01715" data-filter="match-content">CIL-01715</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2039/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01719" data-filter="match-content">CIL-01719</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0997/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01721" data-filter="match-content">CIL-01721</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0836/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01722" data-filter="match-content">CIL-01722</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/0774/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01735" data-filter="match-content">CIL-01735</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1239/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01770" data-filter="match-content">CIL-01770</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2340/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01782" data-filter="match-content">CIL-01782</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2488/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01786" data-filter="match-content">CIL-01786</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2546/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01790" data-filter="match-content">CIL-01790</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2630/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01796" data-filter="match-content">CIL-01796</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2879/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01801" data-filter="match-content">CIL-01801</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/2771/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01820" data-filter="match-content">CIL-01820</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 15/2862/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01828" data-filter="match-content">CIL-01828</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3338/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01834" data-filter="match-content">CIL-01834</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3462/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01852" data-filter="match-content">CIL-01852</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3767/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01855" data-filter="match-content">CIL-01855</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/2607/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01861" data-filter="match-content">CIL-01861</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3546/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01901" data-filter="match-content">CIL-01901</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/4036/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01929" data-filter="match-content">CIL-01929</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3936/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01933" data-filter="match-content">CIL-01933</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/0039/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01955" data-filter="match-content">CIL-01955</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/0259/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-01966" data-filter="match-content">CIL-01966</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1512/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02202" data-filter="match-content">CIL-02202</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/3552/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02488" data-filter="match-content">CIL-02488</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 14/0460/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02496" data-filter="match-content">CIL-02496</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/0912/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02505" data-filter="match-content">CIL-02505</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/1407/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02528" data-filter="match-content">CIL-02528</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/3679/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02539" data-filter="match-content">CIL-02539</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2095/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02551" data-filter="match-content">CIL-02551</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2389/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02562" data-filter="match-content">CIL-02562</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2773/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02583" data-filter="match-content">CIL-02583</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/3114/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02592" data-filter="match-content">CIL-02592</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2549/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02598" data-filter="match-content">CIL-02598</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2904/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02601" data-filter="match-content">CIL-02601</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/3399/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02625" data-filter="match-content">CIL-02625</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/3898/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02649" data-filter="match-content">CIL-02649</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/3074/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02652" data-filter="match-content">CIL-02652</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/4494/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02685" data-filter="match-content">CIL-02685</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/0442/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02716" data-filter="match-content">CIL-02716</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/0870/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02733" data-filter="match-content">CIL-02733</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/1409/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02747" data-filter="match-content">CIL-02747</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/1380/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02766" data-filter="match-content">CIL-02766</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 17/1239/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02791" data-filter="match-content">CIL-02791</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 16/3025/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02820" data-filter="match-content">CIL-02820</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/2899/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02833" data-filter="match-content">CIL-02833</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/0846/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02889" data-filter="match-content">CIL-02889</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/1959/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02907" data-filter="match-content">CIL-02907</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/0872/HD</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02938" data-filter="match-content">CIL-02938</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 18/3498/F</p>
+  </td>
+</tr>
+<tr class=" historical-item"  data-filter="item" data-historical-item="true">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-02991" data-filter="match-content">CIL-02991</a>
+      <span class="govuk-visually-hidden">This record is </span><strong class="govuk-tag govuk-tag--grey">historical</strong>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/2843/MA</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-03007" data-filter="match-content">CIL-03007</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/4289/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-03048" data-filter="match-content">CIL-03048</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 20/0718/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-03117" data-filter="match-content">CIL-03117</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 20/1822/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-03123" data-filter="match-content">CIL-03123</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 20/1422/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./CIL-03144" data-filter="match-content">CIL-03144</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Community-Infrastructure-Levy agreement for planning application 19/3865/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00001" data-filter="match-content">S106-00001</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 06/1211/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00008" data-filter="match-content">S106-00008</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 14/0460/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00010" data-filter="match-content">S106-00010</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 00/1323/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00014" data-filter="match-content">S106-00014</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/0835/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00019" data-filter="match-content">S106-00019</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/2766/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00028" data-filter="match-content">S106-00028</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 11/1587/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00031" data-filter="match-content">S106-00031</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 11/2223/F</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00033" data-filter="match-content">S106-00033</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/0022/O</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00034" data-filter="match-content">S106-00034</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/0022/O</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00035" data-filter="match-content">S106-00035</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/0022/O</p>
+  </td>
+</tr>
+<tr class=""  data-filter="item" data-historical-item="false">
+  <td>
+    <h4 class="govuk-heading-s govuk-!-font-weight-regular dl-break-word govuk-!-margin-bottom-0">
+      <a class="govuk-link" href="./S106-00036" data-filter="match-content">S106-00036</a>
+    </h4>
+  </td>
+  <td>
+    <p class="govuk-body govuk-!-margin-bottom-0" data-filter="match-content">Section-106 agreement for planning application 12/0022/O</p>
+  </td>
+</tr></tbody>
+</table>
+
+        </div>
+
+
+        </main>
+      </div>
+
+<div class="dl-sticky-banner__container" data-module="sticky-banner">
+    <div class="dl-sticky-banner">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+<a href="#index-title" class="govuk-link govuk-link--no-visited-state back-to-top__link">
+    <svg role="presentation" focusable="false" class="back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+        <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+    </svg>Back to top
+</a>            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="govuk-footer " role="contentinfo"
+>
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>              <ul class="govuk-footer__inline-list">
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/cookies">
+                      Cookies
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/accessibility-statement">
+                      Accessibility statement
+                    </a>
+                  </li>
+                  <li class="govuk-footer__inline-list-item">
+                    <a class="govuk-footer__link" href="/design-system">
+                      Design system
+                    </a>
+                  </li>
+              </ul>
+            <div class="govuk-footer__meta-custom">
+              The <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">software</a> and <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/">data</a> used to build these pages is <a class="govuk-footer__link" href="https://github.com/digital-land/digital-land/blob/master/LICENSE">open source</a>.
+            </div>
+        <svg
+          role="presentation"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41"
+        >
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+          />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license"
+          >Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+        >© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://digital-land.github.io/javascripts/dl-cookies.js"></script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+	<!-- end google analytics -->
+
+	<script src="https://digital-land.github.io/javascripts/govuk/govuk-frontend.min.js"></script>
+	<script>
+		// initiate all GOVUK components
+		window.GOVUKFrontend.initAll();
+	</script>
+
+	<script src="https://digital-land.github.io/javascripts/dl-frontend.js"></script>
+	<script>
+		// adds any necessary polyfills
+		window.DLFrontend.polyfill();
+	</script>
+
+
+
+    <script>
+        const $bttBanner = document.querySelector('[data-module="sticky-banner"]')
+        const bttComponent = new DLFrontend.BackToTop($bttBanner).init({
+            endElementSelector: '.govuk-footer',
+            startElementSelector: '#index-title',
+            fixClass: 'dl-sticky-banner--fixed'
+        })
+    </script>
+
+
+        <script>
+        // initialise list filter
+        const $form = document.querySelector('[data-filter="form"]');
+        new window.DLFrontend.FilterList($form).init({
+            list_section_selector: '.index-list-wrapper',
+            count_wrapper_selector: '.count-wrapper'
+        })
+        </script>
+        <script>
+            const showCounts = true
+            const $hist = document.querySelector('[data-historical="form"]');
+            new window.DLFrontend.FilterHistorical($hist).init({
+                triggerEvents: "list:filtered",
+                listWrapperSelector: '.index-list-wrapper',
+                showCountsWhenShowingAll: showCounts
+            })
+        </script>
+
+  </body>
+</html>
